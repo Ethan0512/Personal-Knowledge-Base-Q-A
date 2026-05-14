@@ -7,13 +7,9 @@ from langchain_core.prompts import ChatPromptTemplate
 import os
 import numpy as np
 
-# ========= 用你 test_embedding.py 里成功的 API Key =========
 YOUR_API_KEY = "sk-903c5d9bf6364d8bad6ebb5b08b439ef"
-# =========================================================
-
 dashscope.api_key = YOUR_API_KEY
 
-# 配置大模型调用 (这部分之前的代码能用，保持不变)
 os.environ["OPENAI_API_KEY"] = YOUR_API_KEY
 os.environ["OPENAI_API_BASE"] = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
@@ -25,7 +21,6 @@ docs = text_splitter.split_documents(documents)
 texts = [doc.page_content for doc in docs]
 print(f"✅ 文档已切分为 {len(texts)} 个片段")
 
-# ---------- 2. 用 DashScope SDK 生成 Embedding ----------
 print("⏳ 正在生成向量...")
 embeddings_list = []
 for text in texts:
