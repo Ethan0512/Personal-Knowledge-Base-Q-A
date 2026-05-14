@@ -6,7 +6,6 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 import os
 
-# ========= 使用你成功测试过的 API Key =========
 YOUR_API_KEY = "sk-12257bf5efa14be5960ecc07fda2ded6"
 # =============================================
 
